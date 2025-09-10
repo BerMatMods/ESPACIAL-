@@ -1,1100 +1,658 @@
 
-<html lang="en" class="">
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1">
-  <meta name="description" content="I LOVE YOU">
-  <meta name="keywords" content="➪𝐁𝐞𝐫𝐌𝐚𝐭_𝐌𝐨𝐝𝐬𖤍 ❤️">
-  <meta property="og:title" content="➪𝐁𝐞𝐫𝐌𝐚𝐭_𝐌𝐨𝐝𝐬𖤍 ❤️">
-  <meta property="og:description" content="➪𝐁𝐞𝐫𝐌𝐚𝐭_𝐌𝐨𝐝𝐬𖤍 ❤️">
-  <meta property="og:image" content=
-  "https://love.tsonit.com/love.jpg">
-  <meta property="og:url" content=
-  "https://love.tsonit.com/schr283db-300372603">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href=
-  "https://love.tsonit.com/ico_logo.png" sizes="16x16">
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Día de las Flores Amarillas 💛</title>
 
-  <script async src=
-  "https://www.googletagmanager.com/gtag/js?id=G-C01QH0Y269"></script>
-  <script>
-        window.dataLayer = window.dataLayer || [];
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-C01QH0Y269');
-  </script>
-  <script>
-        (function() {
-            const appearance = 'system';
-
-            if (appearance === 'system') {
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-                if (prefersDark) {
-                    document.documentElement.classList.add('dark');
-                }
-            }
-        })();
-  </script>
   <style>
-        html {
-            background-color: oklch(1 0 0);
-        }
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        html.dark {
-            background-color: oklch(0.145 0 0);
-        }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      min-height: 100vh;
+      overflow: hidden;
+      background-color: #121212;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.6s ease;
+      color: #fff;
+    }
+
+    /* Evitar selección */
+    body, .menu-toggle, .menu, .love-letter, .explosion-item, .rain-word, .credits {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* === Título (arriba) === */
+    .title-container {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1100;
+    }
+
+    .title-box {
+      background: rgba(0, 0, 0, 0.8);
+      color: #FFD700;
+      padding: 12px 30px;
+      border-radius: 25px;
+      border: 2px solid #FFD700;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    /* === Carta (más abajo) === */
+    .love-letter {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      border: 2px solid #FFD700;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+      text-align: center;
+      z-index: 1000;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1em;
+      line-height: 1.9;
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .typing {
+      border-right: 2px solid #FFD700;
+      animation: blink-caret 0.6s step-end infinite;
+      color: #fff;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #FFD700; }
+    }
+
+    /* === Menú de Tres Rayas === */
+    .menu-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(145deg, #b84900, #faa200);
+      border: 2px solid #FFD700;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 2000;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .menu-toggle span {
+      width: 26px;
+      height: 3px;
+      background: #fff;
+      margin: 3px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    .menu-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+
+    /* Menú Desplegable */
+    .menu {
+      position: absolute;
+      top: 80px;
+      left: 20px;
+      width: 300px;
+      background: rgba(20, 20, 20, 0.98);
+      backdrop-filter: blur(10px);
+      border: 2px solid #FFD700;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      color: #fff;
+      z-index: 2000;
+      display: none;
+      font-size: 1em;
+      line-height: 1.7;
+      transition: all 0.3s ease;
+    }
+
+    .menu.active {
+      display: block;
+    }
+
+    .menu h3 {
+      color: #FFD700;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+
+    .menu p {
+      color: #ccc;
+      margin-bottom: 15px;
+      font-size: 0.95em;
+    }
+
+    .menu-btn {
+      display: block;
+      width: 100%;
+      background: #444;
+      color: white;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 0.95em;
+      transition: background 0.3s;
+    }
+
+    .menu-btn:hover {
+      background: #555;
+    }
+
+    .menu-btn.lang {
+      background: #007BFF;
+    }
+
+    .menu-btn.theme {
+      background: #b84900;
+    }
+
+    .menu-btn.info {
+      background: #6c757d;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      margin-top: 15px;
+      transition: all 0.3s;
+      box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+    }
+
+    /* === Sunflower (100% original) === */
+    .sun-flower {
+      position: absolute;
+      top: 0;
+      left: 80%;
+      transform: translateY(-100%) rotate(1deg);
+      z-index: 1;
+    }
+    .sun-flower__wrapper {
+      position: absolute;
+      animation: moving 10s infinite;
+    }
+    .sun-flower__circle {
+      width: 10vmin;
+      height: 10vmin;
+      border-radius: 50%;
+      position: relative;
+    }
+    .sun-flower__circle > div {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 6vmin;
+      height: 6vmin;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #b84900;
+    }
+    .sun-flower__circle > div::after {
+      content: "";
+      position: absolute;
+      z-index: 100;
+      left: 50%;
+      top: 50%;
+      width: 8vmin;
+      height: 8vmin;
+      border-radius: 50%;
+      transform: translate(-110%, 5%);
+      border: 0.2vmin solid #faa200;
+      background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(157.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
+                        linear-gradient(90deg, #b84900, #b84900);
+    }
+    .sun-flower__circle--small {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10vmin;
+      height: 10vmin;
+      border-radius: 100% 2% 100% 2%;
+      background-color: #ffc628;
+      transform-origin: left bottom;
+    }
+    .sun-flower__circle--small:nth-child(1) { transform: translate(-50%, -50%) rotate(40deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(2) { transform: translate(-50%, -50%) rotate(80deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(3) { transform: translate(-50%, -50%) rotate(120deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(4) { transform: translate(-50%, -50%) rotate(160deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(5) { transform: translate(-50%, -50%) rotate(200deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(6) { transform: translate(-50%, -50%) rotate(240deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(7) { transform: translate(-50%, -50%) rotate(280deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(8) { transform: translate(-50%, -50%) rotate(320deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(9) { transform: translate(-50%, -50%) rotate(360deg); z-index: 2; }
+    .sun-flower__circle--small:nth-child(10) { transform: translate(-50%, -50%) rotate(400deg); z-index: 2; }
+    .sun-flower__circle--top {
+      transform-origin: left bottom;
+      transform: translate(-50%, -50%) rotate(20deg) !important;
+    }
+    .sun-flower__circle--top > * {
+      background-image: linear-gradient(to left bottom, #fbd603 40%, #ff7d04);
+    }
+    .sun-flower__line .line {
+      width: 12vmin;
+      height: 36vmin;
+      border-radius: 100% 0 0 0;
+      border-left: 1.2vmin solid #bec827;
+      border-top: 1vmin solid #bec827;
+      -webkit-mask-image: linear-gradient(to top, transparent, #bec827 5%);
+    }
+    .sun-flower__leaf {
+      position: absolute;
+      left: 25%;
+      top: 25%;
+      width: 15vmin;
+      height: 12vmin;
+      border-radius: 90% 0% 100% 20%;
+      background-image: linear-gradient(to right bottom, #a7ad27 50%, #bec827 50%);
+      transform-origin: left;
+      transform: perspective(100px) rotateX(40deg) scale(0.7);
+    }
+    .sun-flower__leaf:nth-child(odd) {
+      left: 10%;
+      transform: perspective(100px) rotateY(180deg) rotateX(30deg) rotate(-10deg) scale(0.6);
+    }
+    .sun-flower__leaf::after {
+      content: "";
+      position: absolute;
+      width: 4vmin;
+      height: 6vmin;
+      border-radius: 100% 0 0 0;
+      border-left: 1vmin solid #bec827;
+      border-top: 1vmin solid #bec827;
+      bottom: 0;
+      left: 0;
+      transform: translate(-57%, 72%);
+      z-index: -1;
+    }
+    .sun-flower__leaf--1 { top: 35%; }
+    .sun-flower__leaf--2::after { transform: translate(-84%, 72%); }
+    .sun-flower__leaf--3 {
+      left: 20%;
+      top: 55%;
+      transform: perspective(100px) rotateX(40deg) scale(0.5);
+    }
+    .sun-flower__leaf--3::after { transform: translate(-64%, 72%); }
+    .sun-flower__leaf--4 {
+      left: 5% !important;
+      top: 50%;
+      transform: perspective(100px) rotateY(180deg) rotateX(30deg) rotate(-10deg) scale(0.45) !important;
+    }
+
+    @keyframes moving {
+      0%, 100% { transform: rotate(-6deg); }
+      50% { transform: rotate(-10deg); }
+    }
+
+    /* === Lluvia de palabras === */
+    .rain-word {
+      position: absolute;
+      top: -40px;
+      padding: 8px 14px;
+      border: 2px solid #FFD700;
+      border-radius: 25px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.3em;
+      white-space: nowrap;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      z-index: 2;
+      opacity: 0.95;
+      animation: fall linear infinite;
+    }
+
+    /* Colores según modo */
+    body .rain-word {
+      background: rgba(20, 20, 20, 0.9);
+      color: #FFD700;
+    }
+
+    body.light-mode .rain-word {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(105vh);
+        opacity: 0;
+      }
+    }
+
+    /* === Explosión === */
+    .explosion-item {
+      position: absolute;
+      font-size: 1.8em;
+      pointer-events: none;
+      z-index: 2000;
+      animation: explode 1.8s ease-out forwards;
+      filter: drop-shadow(0 0 5px gold);
+    }
+
+    @keyframes explode {
+      0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--dx), var(--dy)) scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    /* === Créditos === */
+    .credits-container {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+
+    .credits {
+      display: inline-block;
+      background: linear-gradient(45deg, #b84900, #faa200);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4vmin;
+      font-weight: 700;
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      border: 1px solid #FFD700;
+    }
+
+    /* === Modo Claro === */
+    body.light-mode {
+      background-color: #fff9e6;
+      color: #333;
+    }
+
+    body.light-mode .title-box,
+    body.light-mode .love-letter,
+    body.light-mode .menu {
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-color: #FFD700;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    body.light-mode .title-box,
+    body.light-mode .love-letter h2,
+    body.light-mode .menu h3 {
+      color: #FFD700;
+    }
+
+    body.light-mode .typing {
+      color: #333;
+      border-right-color: #b84900;
+    }
   </style>
-  <title>I LOVE YOU - LoveLoom</title>
-  <link rel="preconnect" href="https://fonts.bunny.net">
-  <link href="../css?family=instrument-sans:400,500,600" rel=
-  "stylesheet">
-  <script type="text/javascript">
-        const Ziggy = {
-            "url": "https://love.tsonit.com",
-            "port": null,
-            "defaults": {},
-            "routes": {
-                "home": {
-                    "uri": "\/",
-                    "methods": ["GET", "HEAD"]
-                }
-            }
-        };
-        ! function(t, r) {
-            "object" == typeof exports && "undefined" != typeof module ? module.exports = r() : "function" ==
-                typeof define && define.amd ? define(r) : (t || self).route = r()
-        }(this, function() {
-            function t(t, r) {
-                for (var n = 0; n < r.length; n++) {
-                    var e = r[n];
-                    e.enumerable = e.enumerable || !1, e.configurable = !0, "value" in e && (e.writable = !0), Object
-                        .defineProperty(t, u(e.key), e)
-                }
-            }
-
-            function r(r, n, e) {
-                return n && t(r.prototype, n), e && t(r, e), Object.defineProperty(r, "prototype", {
-                    writable: !1
-                }), r
-            }
-
-            function n() {
-                return n = Object.assign ? Object.assign.bind() : function(t) {
-                    for (var r = 1; r < arguments.length; r++) {
-                        var n = arguments[r];
-                        for (var e in n)({}).hasOwnProperty.call(n, e) && (t[e] = n[e])
-                    }
-                    return t
-                }, n.apply(null, arguments)
-            }
-
-            function e(t) {
-                return e = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function(t) {
-                    return t.__proto__ || Object.getPrototypeOf(t)
-                }, e(t)
-            }
-
-            function o() {
-                try {
-                    var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}))
-                } catch (t) {}
-                return (o = function() {
-                    return !!t
-                })()
-            }
-
-            function i(t, r) {
-                return i = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(t, r) {
-                    return t.__proto__ = r, t
-                }, i(t, r)
-            }
-
-            function u(t) {
-                var r = function(t) {
-                    if ("object" != typeof t || !t) return t;
-                    var r = t[Symbol.toPrimitive];
-                    if (void 0 !== r) {
-                        var n = r.call(t, "string");
-                        if ("object" != typeof n) return n;
-                        throw new TypeError("@toPrimitive must return a primitive value.")
-                    }
-                    return String(t)
-                }(t);
-                return "symbol" == typeof r ? r : r + ""
-            }
-
-            function f(t) {
-                var r = "function" == typeof Map ? new Map : void 0;
-                return f = function(t) {
-                    if (null === t || ! function(t) {
-                            try {
-                                return -1 !== Function.toString.call(t).indexOf("[native code]")
-                            } catch (r) {
-                                return "function" == typeof t
-                            }
-                        }(t)) return t;
-                    if ("function" != typeof t) throw new TypeError(
-                        "Super expression must either be null or a function");
-                    if (void 0 !== r) {
-                        if (r.has(t)) return r.get(t);
-                        r.set(t, n)
-                    }
-
-                    function n() {
-                        return function(t, r, n) {
-                            if (o()) return Reflect.construct.apply(null, arguments);
-                            var e = [null];
-                            e.push.apply(e, r);
-                            var u = new(t.bind.apply(t, e));
-                            return n && i(u, n.prototype), u
-                        }(t, arguments, e(this).constructor)
-                    }
-                    return n.prototype = Object.create(t.prototype, {
-                        constructor: {
-                            value: n,
-                            enumerable: !1,
-                            writable: !0,
-                            configurable: !0
-                        }
-                    }), i(n, t)
-                }, f(t)
-            }
-            var a = String.prototype.replace,
-                c = /%20/g,
-                l = "RFC3986",
-                s = {
-                    default: l,
-                    formatters: {
-                        RFC1738: function(t) {
-                            return a.call(t, c, "+")
-                        },
-                        RFC3986: function(t) {
-                            return String(t)
-                        }
-                    },
-                    RFC1738: "RFC1738",
-                    RFC3986: l
-                },
-                v = Object.prototype.hasOwnProperty,
-                p = Array.isArray,
-                y = function() {
-                    for (var t = [], r = 0; r < 256; ++r) t.push("%" + ((r < 16 ? "0" : "") + r.toString(16))
-                        .toUpperCase());
-                    return t
-                }(),
-                d = function(t, r) {
-                    for (var n = r && r.plainObjects ? Object.create(null) : {}, e = 0; e < t.length; ++e) void 0 !== t[
-                        e] && (n[e] = t[e]);
-                    return n
-                },
-                b = {
-                    arrayToObject: d,
-                    assign: function(t, r) {
-                        return Object.keys(r).reduce(function(t, n) {
-                            return t[n] = r[n], t
-                        }, t)
-                    },
-                    combine: function(t, r) {
-                        return [].concat(t, r)
-                    },
-                    compact: function(t) {
-                        for (var r = [{
-                                obj: {
-                                    o: t
-                                },
-                                prop: "o"
-                            }], n = [], e = 0; e < r.length; ++e)
-                            for (var o = r[e], i = o.obj[o.prop], u = Object.keys(i), f = 0; f < u.length; ++f) {
-                                var a = u[f],
-                                    c = i[a];
-                                "object" == typeof c && null !== c && -1 === n.indexOf(c) && (r.push({
-                                    obj: i,
-                                    prop: a
-                                }), n.push(c))
-                            }
-                        return function(t) {
-                            for (; t.length > 1;) {
-                                var r = t.pop(),
-                                    n = r.obj[r.prop];
-                                if (p(n)) {
-                                    for (var e = [], o = 0; o < n.length; ++o) void 0 !== n[o] && e.push(n[o]);
-                                    r.obj[r.prop] = e
-                                }
-                            }
-                        }(r), t
-                    },
-                    decode: function(t, r, n) {
-                        var e = t.replace(/\+/g, " ");
-                        if ("iso-8859-1" === n) return e.replace(/%[0-9a-f]{2}/gi, unescape);
-                        try {
-                            return decodeURIComponent(e)
-                        } catch (t) {
-                            return e
-                        }
-                    },
-                    encode: function(t, r, n, e, o) {
-                        if (0 === t.length) return t;
-                        var i = t;
-                        if ("symbol" == typeof t ? i = Symbol.prototype.toString.call(t) : "string" != typeof t && (
-                                i = String(t)), "iso-8859-1" === n) return escape(i).replace(/%u[0-9a-f]{4}/gi,
-                            function(t) {
-                                return "%26%23" + parseInt(t.slice(2), 16) + "%3B"
-                            });
-                        for (var u = "", f = 0; f < i.length; ++f) {
-                            var a = i.charCodeAt(f);
-                            45 === a || 46 === a || 95 === a || 126 === a || a >= 48 && a <= 57 || a >= 65 && a <=
-                                90 || a >= 97 && a <= 122 || o === s.RFC1738 && (40 === a || 41 === a) ? u += i
-                                .charAt(f) : a < 128 ? u += y[a] : a < 2048 ? u += y[192 | a >> 6] + y[128 | 63 &
-                                    a] : a < 55296 || a >= 57344 ? u += y[224 | a >> 12] + y[128 | a >> 6 & 63] + y[
-                                    128 | 63 & a] : (a = 65536 + ((1023 & a) << 10 | 1023 & i.charCodeAt(f += 1)),
-                                    u += y[240 | a >> 18] + y[128 | a >> 12 & 63] + y[128 | a >> 6 & 63] + y[128 |
-                                        63 & a])
-                        }
-                        return u
-                    },
-                    isBuffer: function(t) {
-                        return !(!t || "object" != typeof t || !(t.constructor && t.constructor.isBuffer && t
-                            .constructor.isBuffer(t)))
-                    },
-                    isRegExp: function(t) {
-                        return "[object RegExp]" === Object.prototype.toString.call(t)
-                    },
-                    maybeMap: function(t, r) {
-                        if (p(t)) {
-                            for (var n = [], e = 0; e < t.length; e += 1) n.push(r(t[e]));
-                            return n
-                        }
-                        return r(t)
-                    },
-                    merge: function t(r, n, e) {
-                        if (!n) return r;
-                        if ("object" != typeof n) {
-                            if (p(r)) r.push(n);
-                            else {
-                                if (!r || "object" != typeof r) return [r, n];
-                                (e && (e.plainObjects || e.allowPrototypes) || !v.call(Object.prototype, n)) && (r[
-                                    n] = !0)
-                            }
-                            return r
-                        }
-                        if (!r || "object" != typeof r) return [r].concat(n);
-                        var o = r;
-                        return p(r) && !p(n) && (o = d(r, e)), p(r) && p(n) ? (n.forEach(function(n, o) {
-                            if (v.call(r, o)) {
-                                var i = r[o];
-                                i && "object" == typeof i && n && "object" == typeof n ? r[o] = t(i, n,
-                                    e) : r.push(n)
-                            } else r[o] = n
-                        }), r) : Object.keys(n).reduce(function(r, o) {
-                            var i = n[o];
-                            return r[o] = v.call(r, o) ? t(r[o], i, e) : i, r
-                        }, o)
-                    }
-                },
-                h = Object.prototype.hasOwnProperty,
-                g = {
-                    brackets: function(t) {
-                        return t + "[]"
-                    },
-                    comma: "comma",
-                    indices: function(t, r) {
-                        return t + "[" + r + "]"
-                    },
-                    repeat: function(t) {
-                        return t
-                    }
-                },
-                m = Array.isArray,
-                j = String.prototype.split,
-                w = Array.prototype.push,
-                O = function(t, r) {
-                    w.apply(t, m(r) ? r : [r])
-                },
-                E = Date.prototype.toISOString,
-                R = s.default,
-                S = {
-                    addQueryPrefix: !1,
-                    allowDots: !1,
-                    charset: "utf-8",
-                    charsetSentinel: !1,
-                    delimiter: "&",
-                    encode: !0,
-                    encoder: b.encode,
-                    encodeValuesOnly: !1,
-                    format: R,
-                    formatter: s.formatters[R],
-                    indices: !1,
-                    serializeDate: function(t) {
-                        return E.call(t)
-                    },
-                    skipNulls: !1,
-                    strictNullHandling: !1
-                },
-                k = function t(r, n, e, o, i, u, f, a, c, l, s, v, p, y) {
-                    var d, h = r;
-                    if ("function" == typeof f ? h = f(n, h) : h instanceof Date ? h = l(h) : "comma" === e && m(h) && (
-                            h = b.maybeMap(h, function(t) {
-                                return t instanceof Date ? l(t) : t
-                            })), null === h) {
-                        if (o) return u && !p ? u(n, S.encoder, y, "key", s) : n;
-                        h = ""
-                    }
-                    if ("string" == typeof(d = h) || "number" == typeof d || "boolean" == typeof d || "symbol" ==
-                        typeof d || "bigint" == typeof d || b.isBuffer(h)) {
-                        if (u) {
-                            var g = p ? n : u(n, S.encoder, y, "key", s);
-                            if ("comma" === e && p) {
-                                for (var w = j.call(String(h), ","), E = "", R = 0; R < w.length; ++R) E += (0 === R ?
-                                    "" : ",") + v(u(w[R], S.encoder, y, "value", s));
-                                return [v(g) + "=" + E]
-                            }
-                            return [v(g) + "=" + v(u(h, S.encoder, y, "value", s))]
-                        }
-                        return [v(n) + "=" + v(String(h))]
-                    }
-                    var k, T = [];
-                    if (void 0 === h) return T;
-                    if ("comma" === e && m(h)) k = [{
-                        value: h.length > 0 ? h.join(",") || null : void 0
-                    }];
-                    else if (m(f)) k = f;
-                    else {
-                        var $ = Object.keys(h);
-                        k = a ? $.sort(a) : $
-                    }
-                    for (var x = 0; x < k.length; ++x) {
-                        var N = k[x],
-                            C = "object" == typeof N && void 0 !== N.value ? N.value : h[N];
-                        if (!i || null !== C) {
-                            var A = m(h) ? "function" == typeof e ? e(n, N) : n : n + (c ? "." + N : "[" + N + "]");
-                            O(T, t(C, A, e, o, i, u, f, a, c, l, s, v, p, y))
-                        }
-                    }
-                    return T
-                },
-                T = Object.prototype.hasOwnProperty,
-                $ = Array.isArray,
-                x = {
-                    allowDots: !1,
-                    allowPrototypes: !1,
-                    arrayLimit: 20,
-                    charset: "utf-8",
-                    charsetSentinel: !1,
-                    comma: !1,
-                    decoder: b.decode,
-                    delimiter: "&",
-                    depth: 5,
-                    ignoreQueryPrefix: !1,
-                    interpretNumericEntities: !1,
-                    parameterLimit: 1e3,
-                    parseArrays: !0,
-                    plainObjects: !1,
-                    strictNullHandling: !1
-                },
-                N = function(t) {
-                    return t.replace(/&#(\d+);/g, function(t, r) {
-                        return String.fromCharCode(parseInt(r, 10))
-                    })
-                },
-                C = function(t, r) {
-                    return t && "string" == typeof t && r.comma && t.indexOf(",") > -1 ? t.split(",") : t
-                },
-                A = function(t, r, n, e) {
-                    if (t) {
-                        var o = n.allowDots ? t.replace(/\.([^.[]+)/g, "[$1]") : t,
-                            i = /(\[[^[\]]*])/g,
-                            u = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
-                            f = u ? o.slice(0, u.index) : o,
-                            a = [];
-                        if (f) {
-                            if (!n.plainObjects && T.call(Object.prototype, f) && !n.allowPrototypes) return;
-                            a.push(f)
-                        }
-                        for (var c = 0; n.depth > 0 && null !== (u = i.exec(o)) && c < n.depth;) {
-                            if (c += 1, !n.plainObjects && T.call(Object.prototype, u[1].slice(1, -1)) && !n
-                                .allowPrototypes) return;
-                            a.push(u[1])
-                        }
-                        return u && a.push("[" + o.slice(u.index) + "]"),
-                            function(t, r, n, e) {
-                                for (var o = e ? r : C(r, n), i = t.length - 1; i >= 0; --i) {
-                                    var u, f = t[i];
-                                    if ("[]" === f && n.parseArrays) u = [].concat(o);
-                                    else {
-                                        u = n.plainObjects ? Object.create(null) : {};
-                                        var a = "[" === f.charAt(0) && "]" === f.charAt(f.length - 1) ? f.slice(1, -1) :
-                                            f,
-                                            c = parseInt(a, 10);
-                                        n.parseArrays || "" !== a ? !isNaN(c) && f !== a && String(c) === a && c >= 0 &&
-                                            n.parseArrays && c <= n.arrayLimit ? (u = [])[c] = o : "__proto__" !== a &&
-                                            (u[a] = o) : u = {
-                                                0: o
-                                            }
-                                    }
-                                    o = u
-                                }
-                                return o
-                            }(a, r, n, e)
-                    }
-                },
-                D = function(t, r) {
-                    var n = function(t) {
-                        if (!t) return x;
-                        if (null != t.decoder && "function" != typeof t.decoder) throw new TypeError(
-                            "Decoder has to be a function.");
-                        if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t.charset)
-                            throw new TypeError(
-                                "The charset option must be either utf-8, iso-8859-1, or undefined");
-                        return {
-                            allowDots: void 0 === t.allowDots ? x.allowDots : !!t.allowDots,
-                            allowPrototypes: "boolean" == typeof t.allowPrototypes ? t.allowPrototypes : x
-                                .allowPrototypes,
-                            arrayLimit: "number" == typeof t.arrayLimit ? t.arrayLimit : x.arrayLimit,
-                            charset: void 0 === t.charset ? x.charset : t.charset,
-                            charsetSentinel: "boolean" == typeof t.charsetSentinel ? t.charsetSentinel : x
-                                .charsetSentinel,
-                            comma: "boolean" == typeof t.comma ? t.comma : x.comma,
-                            decoder: "function" == typeof t.decoder ? t.decoder : x.decoder,
-                            delimiter: "string" == typeof t.delimiter || b.isRegExp(t.delimiter) ? t.delimiter : x
-                                .delimiter,
-                            depth: "number" == typeof t.depth || !1 === t.depth ? +t.depth : x.depth,
-                            ignoreQueryPrefix: !0 === t.ignoreQueryPrefix,
-                            interpretNumericEntities: "boolean" == typeof t.interpretNumericEntities ? t
-                                .interpretNumericEntities : x.interpretNumericEntities,
-                            parameterLimit: "number" == typeof t.parameterLimit ? t.parameterLimit : x
-                                .parameterLimit,
-                            parseArrays: !1 !== t.parseArrays,
-                            plainObjects: "boolean" == typeof t.plainObjects ? t.plainObjects : x.plainObjects,
-                            strictNullHandling: "boolean" == typeof t.strictNullHandling ? t.strictNullHandling : x
-                                .strictNullHandling
-                        }
-                    }(r);
-                    if ("" === t || null == t) return n.plainObjects ? Object.create(null) : {};
-                    for (var e = "string" == typeof t ? function(t, r) {
-                            var n, e = {},
-                                o = (r.ignoreQueryPrefix ? t.replace(/^\?/, "") : t).split(r.delimiter, Infinity ===
-                                    r.parameterLimit ? void 0 : r.parameterLimit),
-                                i = -1,
-                                u = r.charset;
-                            if (r.charsetSentinel)
-                                for (n = 0; n < o.length; ++n) 0 === o[n].indexOf("utf8=") && ("utf8=%E2%9C%93" ===
-                                    o[n] ? u = "utf-8" : "utf8=%26%2310003%3B" === o[n] && (u = "iso-8859-1"),
-                                    i = n, n = o.length);
-                            for (n = 0; n < o.length; ++n)
-                                if (n !== i) {
-                                    var f, a, c = o[n],
-                                        l = c.indexOf("]="),
-                                        s = -1 === l ? c.indexOf("=") : l + 1; - 1 === s ? (f = r.decoder(c, x
-                                            .decoder, u, "key"), a = r.strictNullHandling ? null : "") : (f = r
-                                            .decoder(c.slice(0, s), x.decoder, u, "key"), a = b.maybeMap(C(c.slice(
-                                                s + 1), r), function(t) {
-                                                return r.decoder(t, x.decoder, u, "value")
-                                            })), a && r.interpretNumericEntities && "iso-8859-1" === u && (a = N(
-                                            a)), c.indexOf("[]=") > -1 && (a = $(a) ? [a] : a), e[f] = T.call(e,
-                                            f) ? b
-                                        .combine(e[f], a) : a
-                                } return e
-                        }(t, n) : t, o = n.plainObjects ? Object.create(null) : {}, i = Object.keys(e), u = 0; u < i
-                        .length; ++u) {
-                        var f = i[u],
-                            a = A(f, e[f], n, "string" == typeof t);
-                        o = b.merge(o, a, n)
-                    }
-                    return b.compact(o)
-                },
-                P = /*#__PURE__*/ function() {
-                    function t(t, r, n) {
-                        var e, o;
-                        this.name = t, this.definition = r, this.bindings = null != (e = r.bindings) ? e : {}, this
-                            .wheres = null != (o = r.wheres) ? o : {}, this.config = n
-                    }
-                    var n = t.prototype;
-                    return n.matchesUrl = function(t) {
-                        var r, n = this;
-                        if (!this.definition.methods.includes("GET")) return !1;
-                        var e = this.template.replace(/[.*+$()[\]]/g, "\\$&").replace(/(\/?){([^}?]*)(\??)}/g,
-                                function(t, r, e, o) {
-                                    var i, u = "(?<" + e + ">" + ((null == (i = n.wheres[e]) ? void 0 : i.replace(
-                                        /(^\^)|(\$$)/g, "")) || "[^/?]+") + ")";
-                                    return o ? "(" + r + u + ")?" : "" + r + u
-                                }).replace(/^\w+:\/\//, ""),
-                            o = t.replace(/^\w+:\/\//, "").split("?"),
-                            i = o[0],
-                            u = o[1],
-                            f = null != (r = new RegExp("^" + e + "/?$").exec(i)) ? r : new RegExp("^" + e + "/?$")
-                            .exec(decodeURI(i));
-                        if (f) {
-                            for (var a in f.groups) f.groups[a] = "string" == typeof f.groups[a] ?
-                                decodeURIComponent(f.groups[a]) : f.groups[a];
-                            return {
-                                params: f.groups,
-                                query: D(u)
-                            }
-                        }
-                        return !1
-                    }, n.compile = function(t) {
-                        var r = this;
-                        return this.parameterSegments.length ? this.template.replace(/{([^}?]+)(\??)}/g, function(n,
-                            e, o) {
-                            var i, u;
-                            if (!o && [null, void 0].includes(t[e])) throw new Error("Ziggy error: '" + e +
-                                "' parameter is required for route '" + r.name + "'.");
-                            if (r.wheres[e] && !new RegExp("^" + (o ? "(" + r.wheres[e] + ")?" : r.wheres[
-                                    e]) + "$").test(null != (u = t[e]) ? u : "")) throw new Error(
-                                "Ziggy error: '" + e + "' parameter '" + t[e] +
-                                "' does not match required format '" + r.wheres[e] +
-                                "' for route '" + r.name + "'.");
-                            return encodeURI(null != (i = t[e]) ? i : "").replace(/%7C/g, "|").replace(
-                                /%25/g, "%").replace(/\$/g, "%24")
-                        }).replace(this.config.absolute ? /(\.[^/]+?)(\/\/)/ : /(^)(\/\/)/, "$1/").replace(
-                            /\/+$/, "") : this.template
-                    }, r(t, [{
-                        key: "template",
-                        get: function() {
-                            var t = (this.origin + "/" + this.definition.uri).replace(/\/+$/, "");
-                            return "" === t ? "/" : t
-                        }
-                    }, {
-                        key: "origin",
-                        get: function() {
-                            return this.config.absolute ? this.definition.domain ? "" + this.config.url
-                                .match(/^\w+:\/\//)[0] + this.definition.domain + (this.config.port ?
-                                    ":" + this.config.port : "") : this.config.url : ""
-                        }
-                    }, {
-                        key: "parameterSegments",
-                        get: function() {
-                            var t, r;
-                            return null != (t = null == (r = this.template.match(/{[^}?]+\??}/g)) ?
-                                void 0 : r.map(function(t) {
-                                    return {
-                                        name: t.replace(/{|\??}/g, ""),
-                                        required: !/\?}$/.test(t)
-                                    }
-                                })) ? t : []
-                        }
-                    }])
-                }(),
-                F = /*#__PURE__*/ function(t) {
-                    function e(r, e, o, i) {
-                        var u;
-                        if (void 0 === o && (o = !0), (u = t.call(this) || this).t = null != i ? i : "undefined" !=
-                            typeof Ziggy ? Ziggy : null == globalThis ? void 0 : globalThis.Ziggy, u.t = n({}, u.t, {
-                                absolute: o
-                            }), r) {
-                            if (!u.t.routes[r]) throw new Error("Ziggy error: route '" + r +
-                                "' is not in the route list.");
-                            u.i = new P(r, u.t.routes[r], u.t), u.u = u.l(e)
-                        }
-                        return u
-                    }
-                    var o, u;
-                    u = t, (o = e).prototype = Object.create(u.prototype), o.prototype.constructor = o, i(o, u);
-                    var f = e.prototype;
-                    return f.toString = function() {
-                        var t = this,
-                            r = Object.keys(this.u).filter(function(r) {
-                                return !t.i.parameterSegments.some(function(t) {
-                                    return t.name === r
-                                })
-                            }).filter(function(t) {
-                                return "_query" !== t
-                            }).reduce(function(r, e) {
-                                var o;
-                                return n({}, r, ((o = {})[e] = t.u[e], o))
-                            }, {});
-                        return this.i.compile(this.u) + function(t, r) {
-                            var n, e = t,
-                                o = function(t) {
-                                    if (!t) return S;
-                                    if (null != t.encoder && "function" != typeof t.encoder)
-                                        throw new TypeError("Encoder has to be a function.");
-                                    var r = t.charset || S.charset;
-                                    if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t
-                                        .charset) throw new TypeError(
-                                        "The charset option must be either utf-8, iso-8859-1, or undefined"
-                                    );
-                                    var n = s.default;
-                                    if (void 0 !== t.format) {
-                                        if (!h.call(s.formatters, t.format)) throw new TypeError(
-                                            "Unknown format option provided.");
-                                        n = t.format
-                                    }
-                                    var e = s.formatters[n],
-                                        o = S.filter;
-                                    return ("function" == typeof t.filter || m(t.filter)) && (o = t.filter), {
-                                        addQueryPrefix: "boolean" == typeof t.addQueryPrefix ? t
-                                            .addQueryPrefix : S.addQueryPrefix,
-                                        allowDots: void 0 === t.allowDots ? S.allowDots : !!t.allowDots,
-                                        charset: r,
-                                        charsetSentinel: "boolean" == typeof t.charsetSentinel ? t
-                                            .charsetSentinel : S.charsetSentinel,
-                                        delimiter: void 0 === t.delimiter ? S.delimiter : t.delimiter,
-                                        encode: "boolean" == typeof t.encode ? t.encode : S.encode,
-                                        encoder: "function" == typeof t.encoder ? t.encoder : S.encoder,
-                                        encodeValuesOnly: "boolean" == typeof t.encodeValuesOnly ? t
-                                            .encodeValuesOnly : S.encodeValuesOnly,
-                                        filter: o,
-                                        format: n,
-                                        formatter: e,
-                                        serializeDate: "function" == typeof t.serializeDate ? t
-                                            .serializeDate : S.serializeDate,
-                                        skipNulls: "boolean" == typeof t.skipNulls ? t.skipNulls : S
-                                            .skipNulls,
-                                        sort: "function" == typeof t.sort ? t.sort : null,
-                                        strictNullHandling: "boolean" == typeof t.strictNullHandling ? t
-                                            .strictNullHandling : S.strictNullHandling
-                                    }
-                                }(r);
-                            "function" == typeof o.filter ? e = (0, o.filter)("", e) : m(o.filter) && (n = o
-                                .filter);
-                            var i = [];
-                            if ("object" != typeof e || null === e) return "";
-                            var u = g[r && r.arrayFormat in g ? r.arrayFormat : r && "indices" in r ? r
-                                .indices ? "indices" : "repeat" : "indices"];
-                            n || (n = Object.keys(e)), o.sort && n.sort(o.sort);
-                            for (var f = 0; f < n.length; ++f) {
-                                var a = n[f];
-                                o.skipNulls && null === e[a] || O(i, k(e[a], a, u, o.strictNullHandling, o
-                                    .skipNulls, o.encode ? o.encoder : null, o.filter, o.sort, o
-                                    .allowDots, o.serializeDate, o.format, o.formatter, o
-                                    .encodeValuesOnly, o.charset))
-                            }
-                            var c = i.join(o.delimiter),
-                                l = !0 === o.addQueryPrefix ? "?" : "";
-                            return o.charsetSentinel && (l += "iso-8859-1" === o.charset ?
-                                "utf8=%26%2310003%3B&" : "utf8=%E2%9C%93&"), c.length > 0 ? l + c : ""
-                        }(n({}, r, this.u._query), {
-                            addQueryPrefix: !0,
-                            arrayFormat: "indices",
-                            encodeValuesOnly: !0,
-                            skipNulls: !0,
-                            encoder: function(t, r) {
-                                return "boolean" == typeof t ? Number(t) : r(t)
-                            }
-                        })
-                    }, f.v = function(t) {
-                        var r = this;
-                        t ? this.t.absolute && t.startsWith("/") && (t = this.p().host + t) : t = this.h();
-                        var e = {},
-                            o = Object.entries(this.t.routes).find(function(n) {
-                                return e = new P(n[0], n[1], r.t).matchesUrl(t)
-                            }) || [void 0, void 0];
-                        return n({
-                            name: o[0]
-                        }, e, {
-                            route: o[1]
-                        })
-                    }, f.h = function() {
-                        var t = this.p(),
-                            r = t.pathname,
-                            n = t.search;
-                        return (this.t.absolute ? t.host + r : r.replace(this.t.url.replace(/^\w*:\/\/[^/]+/, ""),
-                            "").replace(/^\/+/, "/")) + n
-                    }, f.current = function(t, r) {
-                        var e = this.v(),
-                            o = e.name,
-                            i = e.params,
-                            u = e.query,
-                            f = e.route;
-                        if (!t) return o;
-                        var a = new RegExp("^" + t.replace(/\./g, "\\.").replace(/\*/g, ".*") + "$").test(o);
-                        if ([null, void 0].includes(r) || !a) return a;
-                        var c = new P(o, f, this.t);
-                        r = this.l(r, c);
-                        var l = n({}, i, u);
-                        if (Object.values(r).every(function(t) {
-                                return !t
-                            }) && !Object.values(l).some(function(t) {
-                                return void 0 !== t
-                            })) return !0;
-                        var s = function(t, r) {
-                            return Object.entries(t).every(function(t) {
-                                var n = t[0],
-                                    e = t[1];
-                                return Array.isArray(e) && Array.isArray(r[n]) ? e.every(function(t) {
-                                        return r[n].includes(t)
-                                    }) : "object" == typeof e && "object" == typeof r[n] && null !==
-                                    e && null !== r[n] ? s(e, r[n]) : r[n] == e
-                            })
-                        };
-                        return s(r, l)
-                    }, f.p = function() {
-                        var t, r, n, e, o, i, u = "undefined" != typeof window ? window.location : {},
-                            f = u.host,
-                            a = u.pathname,
-                            c = u.search;
-                        return {
-                            host: null != (t = null == (r = this.t.location) ? void 0 : r.host) ? t : void 0 === f ?
-                                "" : f,
-                            pathname: null != (n = null == (e = this.t.location) ? void 0 : e.pathname) ? n :
-                                void 0 === a ? "" : a,
-                            search: null != (o = null == (i = this.t.location) ? void 0 : i.search) ? o : void 0 ===
-                                c ? "" : c
-                        }
-                    }, f.has = function(t) {
-                        return this.t.routes.hasOwnProperty(t)
-                    }, f.l = function(t, r) {
-                        var e = this;
-                        void 0 === t && (t = {}), void 0 === r && (r = this.i), null != t || (t = {}), t = [
-                            "string", "number"
-                        ].includes(typeof t) ? [t] : t;
-                        var o = r.parameterSegments.filter(function(t) {
-                            return !e.t.defaults[t.name]
-                        });
-                        if (Array.isArray(t)) t = t.reduce(function(t, r, e) {
-                            var i, u;
-                            return n({}, t, o[e] ? ((i = {})[o[e].name] = r, i) : "object" == typeof r ? r :
-                                ((u = {})[r] = "", u))
-                        }, {});
-                        else if (1 === o.length && !t[o[0].name] && (t.hasOwnProperty(Object.values(r.bindings)[
-                                0]) || t.hasOwnProperty("id"))) {
-                            var i;
-                            (i = {})[o[0].name] = t, t = i
-                        }
-                        return n({}, this.m(r), this.j(t, r))
-                    }, f.m = function(t) {
-                        var r = this;
-                        return t.parameterSegments.filter(function(t) {
-                            return r.t.defaults[t.name]
-                        }).reduce(function(t, e, o) {
-                            var i, u = e.name;
-                            return n({}, t, ((i = {})[u] = r.t.defaults[u], i))
-                        }, {})
-                    }, f.j = function(t, r) {
-                        var e = r.bindings,
-                            o = r.parameterSegments;
-                        return Object.entries(t).reduce(function(t, r) {
-                            var i, u, f = r[0],
-                                a = r[1];
-                            if (!a || "object" != typeof a || Array.isArray(a) || !o.some(function(t) {
-                                    return t.name === f
-                                })) return n({}, t, ((u = {})[f] = a, u));
-                            if (!a.hasOwnProperty(e[f])) {
-                                if (!a.hasOwnProperty("id")) throw new Error(
-                                    "Ziggy error: object passed as '" + f +
-                                    "' parameter is missing route model binding key '" + e[f] + "'."
-                                );
-                                e[f] = "id"
-                            }
-                            return n({}, t, ((i = {})[f] = a[e[f]], i))
-                        }, {})
-                    }, f.valueOf = function() {
-                        return this.toString()
-                    }, r(e, [{
-                        key: "params",
-                        get: function() {
-                            var t = this.v();
-                            return n({}, t.params, t.query)
-                        }
-                    }, {
-                        key: "routeParams",
-                        get: function() {
-                            return this.v().params
-                        }
-                    }, {
-                        key: "queryParams",
-                        get: function() {
-                            return this.v().query
-                        }
-                    }])
-                }( /*#__PURE__*/ f(String));
-            return function(t, r, n, e) {
-                var o = new F(t, r, n, e);
-                return t ? o.toString() : o
-            }
-        });
-  </script>
-  <link rel="preload" as="style" href=
-  "../build/assets/app-DRj5kdD6.css">
-  <link rel="modulepreload" href=
-  "../build/assets/app-CX0-RSby.js?v=7">
-  <link rel="modulepreload" href=
-  "../build/assets/home-BHIVrSJRE.js?v=7">
-  <link rel="modulepreload" href=
-  "../build/assets/particle-effect-D3Gqr4oF.js">
-  <link rel="modulepreload" href=
-  "../build/assets/three.module-5Y2TLo_k.js">
-  <link rel="modulepreload" href=
-  "../build/assets/troika-three-text.esm-DL5-P_dx.js">
-  <link rel="stylesheet" href="../build/assets/app-DRj5kdD6.css">
-  <script type="module" src=
-  "../build/assets/app-CX0-RSby.js?v=7"></script>
-  <script type="module" src=
-  "../build/assets/home-BHIVrSJRE.js?v=7"></script>
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="font-sans antialiased">
-  <noscript>
-  <div style=
-  "background: #ffdddd; color: #d8000c; padding: 15px; text-align: center; font-weight: bold;">
-    Vui lòng bật JavaScript của trình duyệt để sử dụng đầy đủ chức
-    năng của trang web.
-  </div></noscript>
-  <div id="app" data-page=
-  '{ "component": "views/home", "props": { "errors": {}, "name": "LoveLoom", "quote": { "message": "Gửi lời yêu thương", "author": "LoveLoom" }, "auth": { "user": null }, "ziggy": { "url": "https://love.tsonit.com", "port": null, "defaults": [], "location": "https://love.tsonit.com/schr283db-300372603" }, "message": "get success", "client": { "id": 382091, "fontName": "Mali", "color": "#EE66A6", "messages": ["I LOVE YOU CANTIKKU \u2764\ufe0f"], "created_at": "2025-08-07 12:47:33", "updated_at": "2025-08-07 12:47:33", "type_music": "zing", "music": "Z676F9EZ", "image" : [] }, "clientId": "382091" }, "url": "/schr283db-300372603", "version": "1", "clearHistory": false, "encryptHistory": false }'>
-  </div><button id="toggle-audio" class=
-  "text-white btn-audio-toggle" style=
-  "position: absolute; top: 10px; right: 10px; z-index: 999;"><i id="audio-icon"
-  class="text-white fa-solid fa-volume-high"></i></button> 
+<body id="body">
+
+  <!-- Título -->
+  <div class="title-container">
+    <div class="title-box" id="titleText">🌻 Feliz Día de las Flores Amarillas 💛</div>
+  </div>
+
+  <!-- Carta -->
+  <div class="love-letter">
+    <p id="typed-text" class="typing"></p>
+  </div>
+
+  <!-- Menú de Tres Rayas -->
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu" id="menu">
+    <h3>⚙️ Menú</h3>
+    <button class="menu-btn theme" id="themeToggle">🌙 Activar Modo Claro</button>
+    <button class="menu-btn lang" id="langToggle">🌐 Cambiar a Inglés</button>
+    <div class="menu-btn info">ℹ️ Información del Proyecto</div>
+    <p>Diseñado por <strong>BerMatMods</strong>.<br>Perfecto para regalar o sorprender.</p>
+    <a href="https://wa.me/51930569195" target="_blank" class="whatsapp-btn">💬 Personalizar por WhatsApp</a>
+  </div>
+
+  <!-- Sunflower (original) -->
+  <div class="sun-flower__wrapper">
+    <div class="sun-flower">
+      <div class="sun-flower__circle">
+        <div class="sun-flower__circle--bottom">
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+        </div>
+        <div class="sun-flower__circle--top">
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+          <div class="sun-flower__circle--small"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sun-flower__line">
+      <div class="line"></div>
+      <div class="sun-flower__leaf sun-flower__leaf--1"></div>
+      <div class="sun-flower__leaf sun-flower__leaf--2"></div>
+      <div class="sun-flower__leaf sun-flower__leaf--3"></div>
+      <div class="sun-flower__leaf sun-flower__leaf--4"></div>
+    </div>
+  </div>
+
+  <!-- Créditos -->
+  <div class="credits-container">
+    <div class="credits">By AnthZz Berrocal BerMatMods</div>
+  </div>
+
+  <!-- Música -->
+  <audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/04/26/audio_8f9c9c3eb5.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
   <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+    const themeToggle = document.getElementById("themeToggle");
+    const langToggle = document.getElementById("langToggle");
+    const body = document.getElementById("body");
+    const titleText = document.getElementById("titleText");
+    const typedTextElement = document.getElementById("typed-text");
 
-        let tokenData = null;
-        async function getToken() {
-            try {
-                const res = await fetch('/token-api-mp3');
-                if (!res.ok) throw new Error('Không lấy được token');
-                const data = await res.json();
-                tokenData = data;
-                return tokenData;
-            } catch (err) {
-                console.error('Lỗi lấy token:', err);
-                return null;
-            }
+    // Textos más románticos
+    const texts = {
+      es: {
+        title: "🌻 Feliz Día de las Flores Amarillas 💛",
+        card: `Mi amor... 💖\n\nHoy el universo conspira para que te sientas amada, porque eres la flor más hermosa en mi jardín del alma. 🌻\n\nComo este girasol, siempre buscas la luz, irradias calor, das vida con tu presencia. 🌼\n\nCada latido mío canta tu nombre, cada suspiro lleva tu esencia. 💌\n\nEres mi refugio, mi paz, mi eterno amanecer. 🌅\n\nGracias por brillar tanto, por ser tan fuerte, tan dulce, tan tú.\n\nTe amo con cada pétalo de este girasol, con cada rayo de sol, con cada latido. ❤️\n\nHoy y siempre… eres mi todo. 🌌✨`
+      },
+      en: {
+        title: "🌻 Happy Yellow Flowers Day 💛",
+        card: `My love... 💖\n\nToday the universe conspires to make you feel loved, because you're the most beautiful flower in the garden of my soul. 🌻\n\nLike this sunflower, you always seek the light, radiate warmth, and bring life with your presence. 🌼\n\nEvery heartbeat of mine sings your name, every breath carries your essence. 💌\n\nYou are my shelter, my peace, my eternal sunrise. 🌅\n\nThank you for shining so bright, for being so strong, so sweet, so *you*.\n\nI love you with every petal of this sunflower, with every ray of sunlight, with every heartbeat. ❤️\n\nToday and always… you are my everything. 🌌✨`
+      }
+    };
+
+    let currentLang = 'es';
+
+    // Menú toggle
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    // Modo claro
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("light-mode");
+      themeToggle.textContent = body.classList.contains("light-mode") 
+        ? "🌞 Activar Modo Oscuro" 
+        : "🌙 Activar Modo Claro";
+    });
+
+    // Cambiar idioma
+    langToggle.addEventListener("click", () => {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      titleText.textContent = texts[currentLang].title;
+      typedTextElement.textContent = '';
+      type();
+      langToggle.textContent = currentLang === 'es' ? '🌐 Change to English' : '🌐 Cambiar a Español';
+    });
+
+    // Música
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.2;
+    document.body.addEventListener("click", function playMusic() {
+      music.play().catch(e => console.log("Error:", e));
+      document.body.removeEventListener("click", playMusic);
+    }, { once: true });
+
+    // Escritura automática
+    function type() {
+      let index = 0;
+      const fullText = texts[currentLang].card;
+      typedTextElement.textContent = '';
+      function addChar() {
+        if (index < fullText.length) {
+          const char = fullText.charAt(index);
+          typedTextElement.textContent += char === '\n' ? '\n' : char;
+          index++;
+          setTimeout(addChar, 40);
         }
-        async function fetchWithAuth(url) {
-            await getToken();
-            if (!tokenData) throw new Error('Không có token xác thực');
-            const headers = {
-                'X-Auth-Token': tokenData.token,
-                'X-Auth-Timestamp': tokenData.timestamp,
-                'X-Client-Key': tokenData.clientKey,
-                'X-Auth-Nonce': tokenData.nonce,
-            };
+      }
+      addChar();
+    }
 
-            let res = await fetch(url, {
-                headers
-            });
+    setTimeout(type, 1000);
 
-            if (!res.ok) {
-                // Nếu response lỗi, đọc nội dung lỗi và log
-                const errorText = await res.text();
-                console.error(`Lỗi response (${res.status}):`, errorText);
-                if (res.status === 403) {
-                    await getToken();
-                    if (!tokenData) throw new Error('Không có token xác thực');
-                    const newHeaders = {
-                        'X-Auth-Token': tokenData.token,
-                        'X-Auth-Timestamp': tokenData.timestamp,
-                        'X-Client-Key': tokenData.clientKey,
-                        'X-Auth-Nonce': tokenData.nonce,
-                    };
+    // Lluvia de palabras
+    const loveWords = [
+      "Amor 💖", "Corazón ❤️", "Mi vida 🌟", "Eres hermosa ✨", "Te adoro 💌", 
+      "Para siempre 💍", "Gracias 🙏", "Te adoro 🥰", "Mi sol ☀️", "Mi todo 💞", 
+      "🌼", "💛", "💜", "💕", "💞", "💖", "💗", "💓", "💝", "🌻", "💫"
+    ];
 
-                    res = await fetch(url, {
-                        headers: newHeaders
-                    });
+    function createRainWord() {
+      const word = document.createElement("div");
+      word.classList.add("rain-word");
+      word.textContent = loveWords[Math.floor(Math.random() * loveWords.length)];
+      word.style.left = Math.random() * 90 + 5 + "vw";
+      word.style.animationDuration = (Math.random() * 12 + 6) + "s";
+      document.body.appendChild(word);
+      setTimeout(() => word.remove(), 15000);
+    }
 
-                    if (!res.ok) {
-                        const errText = await res.text();
-                        // console.error(`Lỗi sau khi refresh token (${res.status}):`, errText);
-                        throw new Error(`Request lỗi sau khi refresh token: ${res.status}`);
-                    }
-                } else {
-                    throw new Error(`Request lỗi: ${res.status}`);
-                }
-            }
+    setInterval(createRainWord, 350);
+    for (let i = 0; i < 20; i++) setTimeout(createRainWord, i * 400);
 
-            return res;
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            const type_music = "zing";
-            const music = "Z676F9EZ";
-            const toggleBtn = document.getElementById("toggle-audio");
-            const audioIcon = document.getElementById("audio-icon");
-
-            const waitForAudio = setInterval(() => {
-                const audio = document.getElementById('audio-preview');
-                if (!audio) return;
-                clearInterval(waitForAudio);
-
-                // ✅ Cập nhật icon dựa trên trạng thái audio
-                const updateAudioIcon = () => {
-                    if (audio.muted || audio.paused) {
-                        audioIcon.classList.remove("fa-volume-high");
-                        audioIcon.classList.add("fa-volume-xmark");
-                    } else {
-                        audioIcon.classList.remove("fa-volume-xmark");
-                        audioIcon.classList.add("fa-volume-high");
-                    }
-                };
-
-                // ✅ Xử lý khi người dùng nhấn nút
-                toggleBtn.addEventListener("click", () => {
-                    if (audio.paused) {
-                        audio.play().then(() => {
-                            audio.muted = false;
-                        }).catch(() => {
-                            alert(
-                                'Không thể phát âm thanh. Có thể do trình duyệt chặn tự động phát.'
-                            );
-                        }).finally(() => {
-                            updateAudioIcon();
-                        });
-                    } else {
-                        audio.muted = !audio.muted;
-                        updateAudioIcon();
-                    }
-                });
-
-                // ✅ Cố gắng phát nếu chưa phát
-                const tryPlay = () => {
-                    if (audio.paused) {
-                        audio.play().then(() => {
-                            audio.muted = false;
-                        }).catch(() => {
-                            // Trình duyệt chặn autoplay
-                        }).finally(() => {
-                            updateAudioIcon();
-                        });
-                    } else {
-                        updateAudioIcon();
-                    }
-                };
-
-                // ✅ Gắn icon cập nhật theo các sự kiện
-                audio.addEventListener("play", updateAudioIcon);
-                audio.addEventListener("pause", updateAudioIcon);
-                audio.addEventListener("volumechange", updateAudioIcon);
-
-                // ✅ Thiết lập nguồn âm thanh
-                if (type_music === 'system') {
-                    if (music === null || music === '') {
-                        audio.src = '/storage/musics/' + "CjfFFwHK4iTik1AjrDa33PT3waZm4Bv1qFreni4e.mp3";
-                        console.log(audio.src);
-                    } else {
-                        audio.src = '/storage/' + music;
-                    }
-                    audio.classList.remove('d-none');
-                } else if (type_music === 'zing') {
-                    fetchWithAuth(`/get-song?id=${music}`)
-                        .then(res => {
-                            if (!res.ok) throw new Error('Lỗi khi lấy thông tin bài hát');
-                            return res.json();
-                        })
-                        .then(res => {
-                            const mp3Url = res.stream?.['128'];
-                            if (mp3Url) {
-                                audio.src = mp3Url;
-                                audio.classList.remove("d-none");
-                            } else {
-                                audio.classList.add("d-none");
-                                alert('Không tìm thấy link mp3');
-                            }
-                        })
-                        .catch(() => {
-                            audio.classList.add("d-none");
-                            alert(
-                                'Oops, tớ không tìm thấy bài hát này rồi. Có thể đây là bài Premium, cậu thử chọn bài khác giúp tớ nha'
-                            );
-                        });
-                } else if (type_music === 'link') {
-                    audio.src = music;
-                    audio.classList.remove('d-none');
-                }
-
-                tryPlay();
-
-                // ✅ Phát lại khi người dùng tương tác với trang
-                const oncePlay = () => {
-                    tryPlay();
-                    document.removeEventListener("click", oncePlay);
-                };
-                document.addEventListener("click", oncePlay);
-
-                const onInteract = () => tryPlay();
-                window.addEventListener("wheel", onInteract);
-                window.addEventListener("mousedown", onInteract);
-                window.addEventListener("mousemove", onInteract);
-                window.addEventListener("touchstart", onInteract);
-            }, 200);
-        });
-  </script> 
-  <script>
-
-            // Chặn chuột phải
-            document.addEventListener("contextmenu", function(e) {
-                e.preventDefault();
-            });
-
-            // Chặn F12, Ctrl+U, Ctrl+Shift+I/J/C/S, Cmd+Opt+I (Mac)
-            document.addEventListener("keydown", function(e) {
-                if (
-                    e.key === "F12" ||
-                    (e.ctrlKey && e.shiftKey && ["i", "j", "c", "s"].includes(e.key.toLowerCase())) ||
-                    (e.ctrlKey && e.key.toLowerCase() === "u") ||
-                    (e.metaKey && e.altKey && e.key.toLowerCase() === "i") || // Cmd + Opt + I
-                    (e.metaKey && e.key.toLowerCase() === "u") // Cmd + U
-                ) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-
-            // Xóa console methods
-            console.log = () => {};
-            console.debug = () => {};
-            console.warn = () => {};
-            console.info = () => {};
-
-            // Phát hiện DevTools bằng thời gian thực thi debugger
-            setInterval(() => {
-                const before = new Date().getTime();
-                debugger;
-                const after = new Date().getTime();
-                if (after - before > 100) {
-                    document.body.innerHTML =
-                        '<h1 style="text-align:center;margin-top:100px;color:red">🔒 Bạn đang cố mở Developer Tools!</h1>';
-                }
-            }, 1000);
-
-            // Phát hiện DevTools qua kích thước cửa sổ
-            // function detectDevToolsSize() {
-            //     if (
-            //         window.outerWidth - window.innerWidth > 160 ||
-            //         window.outerHeight - window.innerHeight > 160
-            //     ) {
-            //         document.body.innerHTML = '<h1 style="text-align:center;margin-top:100px;color:red">🔒 Developer Tools bị phát hiện!</h1>';
-            //     }
-            // }
-            // window.onresize = detectDevToolsSize;
-            // window.onload = detectDevToolsSize;
-
-            // Phát hiện mở console qua toString tampering
-            (function() {
-                const element = new Image();
-                Object.defineProperty(element, 'id', {
-                    get: function() {
-                        document.body.innerHTML =
-                            '<h1 style="text-align:center;margin-top:100px;color:red">⚠️ Đừng mở console!</h1>';
-                        throw new Error("Console is blocked");
-                    }
-                });
-
-                setInterval(() => {
-                    console.log(element);
-                    console.clear();
-                }, 2000);
-            })();
-
-            // Ngăn inspect element qua mouse drag
-            document.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-            });
-
-            // Ngăn chọn toàn bộ (Ctrl+A)
-            document.addEventListener('keydown', function(e) {
-                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'a') {
-                    e.preventDefault();
-                }
-            });
+    // Explosión
+    document.body.addEventListener("click", (e) => {
+      for (let i = 0; i < 35; i++) {
+        const item = document.createElement("div");
+        item.classList.add("explosion-item");
+        item.textContent = Math.random() > 0.4 ? "🌻" : "❤️‍🔥";
+        item.style.left = e.clientX + "px";
+        item.style.top = e.clientY + "px";
+        const angle = Math.random() * Math.PI * 2;
+        const distance = Math.random() * 200 + 100;
+        const dx = Math.cos(angle) * distance;
+        const dy = Math.sin(angle) * distance;
+        item.style.setProperty('--dx', dx + 'px');
+        item.style.setProperty('--dy', dy + 'px');
+        document.body.appendChild(item);
+        setTimeout(() => item.remove(), 1800);
+      }
+    });
   </script>
 </body>
 </html>
